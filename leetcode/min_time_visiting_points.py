@@ -40,8 +40,7 @@ for index in range(0,len(points)-1):
     x2 = points[index+1][0]
     y2 = points[index+1][1]
     if x2 != x1 and y2 != y1:
-        while x2 != x1 or y2 != y1:
-            print(x1)
+        while True:
             if x2 > x1:
                 x1 +=1
             else:
@@ -51,17 +50,22 @@ for index in range(0,len(points)-1):
             else:
                 y1-=1
             steps +=1
-    else:
-        while x2 != x1:
-            if x2 > x1:
-                x1 +=1
-            else:
-                x1-=1
-            steps +=1
-        while y2 != y1:
-            if y2 > y1:
-                y1 +=1
-            else:
-                y1-=1
-            steps +=1
+            if x2 == x1 or y2 == y1:
+                break
+
+    while x2 != x1:
+
+
+        if x2 > x1:
+            x1 +=1
+        else:
+            x1-=1
+        steps +=1
+    while y2 != y1:
+
+        if y2 > y1:
+            y1 +=1
+        else:
+            y1-=1
+        steps +=1
     print(steps)
