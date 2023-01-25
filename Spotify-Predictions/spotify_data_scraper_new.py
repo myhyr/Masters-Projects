@@ -51,7 +51,7 @@ class Scrapper():
             print('type of row is {}'.format(type(row)))
 
     def createDatabase(self):
-        print('yolo')
+        print('new')
 
 
 def main():
